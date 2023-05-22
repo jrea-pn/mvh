@@ -1,4 +1,4 @@
-const Layout = ({ children }) => {
+const PageLayout = ({ children }) => {
     const logo = "Meadow Vale Foods";
     return (
         <div>
@@ -10,4 +10,4 @@ const Layout = ({ children }) => {
     );
 };
 
-export default Layout;
+export default PageLayout;
