@@ -1,5 +1,5 @@
 // Helpers
-import { classNames } from "../Helpers";
+import { classNames } from "../helpers";
 
 const Container = ({ children, className }) => {
   return (

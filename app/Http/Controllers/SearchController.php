@@ -76,7 +76,7 @@ class SearchController extends Controller
       ->union($filters['inStock'])
       ->union($filters['outOfStock']);
 
-    $products = $products->take(25)->map(function ($product) {
+    $productsPaginated = $products->take(25)->map(function ($product) {
       return [
         'id' => $product->id,
         'description' => $product->description,
@@ -88,7 +88,7 @@ class SearchController extends Controller
       ];
     });
 
-    return ['filters' => $filters->get(), 'hits' => $products, 'count' => $products->count()];
+    return ['filters' => $filters->get(), 'hits' => $productsPaginated, 'count' => $products->count()];
 
   }
 }

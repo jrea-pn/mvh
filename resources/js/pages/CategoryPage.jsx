@@ -113,6 +113,22 @@ const ProductsPage = () => {
     setFilters(filtersClone);
   };
 
+  const getActiveFilters = () => {
+    const activeFilters = filters.reduce((acc, cur) => {
+      const filterName = cur.name;
+      const activeOptions = cur.options.filter(
+        (option) => option.active && option.count > 0
+      );
+
+      for (option of activeOptions) {
+        acc.push({ name: filterName, value: option.value });
+      }
+
+      return acc;
+    }, []);
+    return getActiveFilters;
+  };
+
   async function search() {
     const query = {
       filters: filters.reduce((acc, cur) => {
