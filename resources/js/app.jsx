@@ -2,6 +2,6 @@ import "./bootstrap";
 // import "../css/app.css";
 
 import ReactDOM from "react-dom/client";
-import ProductsPage from "./pages/ProductsPage";
+import CategoryPage from "./pages/CategoryPage";
 
-ReactDOM.createRoot(document.getElementById("app")).render(<ProductsPage />);
+ReactDOM.createRoot(document.getElementById("app")).render(<CategoryPage />);
